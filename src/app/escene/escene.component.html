@@ -1,0 +1,39 @@
+
+ <div class="container">
+  <div  [@animaciones]='estado' class="target">
+   <div class="imagen" [style.background]="frases[currentStep].bgcolor">
+    <img  src="{{frases[currentStep].img}}" alt="">
+   </div>
+<div class="contenido">
+  <div class="frases">
+      <h4>{{frases[currentStep].title}}</h4>
+      <p>{{frases[currentStep].description}}</p>
+
+  </div>
+  <div class="botones">
+    <div class="posicion">
+   
+      <div class="paginas"  *ngFor="let frase of frases; index as i">
+        @if(i !== currentStep){
+          <div class="indice"  (click)=" i > currentStep ? avanzar():retroceder()"></div>
+        }
+        @else{
+          <div class="indicePrincipal" ></div>
+        }
+        
+      </div>
+    </div>
+    <div class="boton">
+      <div class="retroceder" (click)="retroceder()" [style.display]="currentStep == 0 ? 'none':'block'">
+        <img src="../../assets/img/circle-left-regular.svg" alt="">
+      </div>
+     <div class="avanzar" (click)="avanzar()" [style.display]="currentStep == frases.length - 1? 'none':'block'">
+      <img src="../../assets/img/circle-right-solid.svg" alt="">
+     </div>
+     
+    </div>
+  </div>
+</div>
+  </div>
+ </div>
+
