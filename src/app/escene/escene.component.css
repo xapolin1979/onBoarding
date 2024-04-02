@@ -73,6 +73,7 @@ padding: 10px;
    border-radius: 100px;
     margin: 3px;
     background-color: black;
+    cursor: pointer;
 }
 .indicePrincipal{
     width: 20px;
@@ -80,6 +81,7 @@ padding: 10px;
     border-radius: 100px;
     margin: 3px;
     background-color: black;
+    cursor: pointer;
 }
 .boton{
     width: 100px;
