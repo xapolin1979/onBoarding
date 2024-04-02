@@ -46,9 +46,11 @@ import {
  ],
 })
 export class EsceneComponent {
+  
   @Input() frases: any;
   currentStep: number = 0;
   estado: string = 'start';
+
   avanzar() {
     if (this.currentStep < this.frases.length - 1) {
       this.currentStep++;
@@ -58,13 +60,9 @@ export class EsceneComponent {
       }
       else{
         this.estado='start'
-      }
-
-  
-   
+      } 
     }
  
-
   }
 
   retroceder() {
@@ -78,8 +76,7 @@ export class EsceneComponent {
         this.estado='end'
       }
     }
-   
-  }
+ }
 
 
 }
